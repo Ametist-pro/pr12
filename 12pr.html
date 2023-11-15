@@ -1,0 +1,21 @@
+<script>
+
+
+var x = 5;
+
+function getResult(x) {
+  if (window.navigator.userAgent.includes('OPR')) {
+    return 3 * x + 5;
+  } else if (window.navigator.userAgent.includes('Firefox')) {
+    return x + 3;
+  } else if (window.navigator.userAgent.includes('Chrome')) {
+    return (x / 3) + (x / 5);
+  }
+  else {
+    document.writeln("Браузер не подходит");
+  }
+}
+
+document.writeln(getResult(x));
+
+</script>
